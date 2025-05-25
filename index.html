@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ - خدمة إسلامية</title>
+    <meta name="description" content="خدمة إسلامية مميزة باسم وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ تقدم محتوى ديني قيم وفعال." />
+    <meta name="keywords" content="خدمة إسلامية, قرآن,كل ما يحتاجه المسلم"/>
+    <meta name="author" content="خدمة وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ" />
+   <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .logo:hover {
+            transform: rotate(360deg);
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            color: #f9d423;
+        }
+        
+        .verse {
+            font-size: 18px;
+            color: #a2d9ff;
+            margin-bottom: 30px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .loading {
+            font-size: 22px;
+            margin: 20px 0;
+            height: 30px;
+            color: #ffffff;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 25px 0;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, #f9d423, #ff4e50);
+            border-radius: 10px;
+            transition: width 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+        
+        .message {
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 2s forwards;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 3px solid #f9d423;
+        }
+        
+        .heart {
+            color: #ff4757;
+            font-size: 24px;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+            opacity: 0;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+        <img src="https://f.top4top.io/p_3398jodzg0.jpg" alt="باتش تي امل" class="logo">
+        
+        <h1>وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ</h1>
+        
+        <div class="verse">خدمة إسلامية</div>
+        
+        <div class="loading" id="loading">جاري التحميل...</div>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <div class="message" id="message">
+            نريد منك الدعاء بظهر الغيب فضلا 
+            <span class="heart">♥</span>
+        </div>
+        
+        <div class="footer">خدمة مقدمة لكم بكل حب</div>
+    </div>
+
+    <script>
+        // إنشاء النجوم المتلألئة
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // أحجام عشوائية للنجوم
+                const size = Math.random() * 4 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // مواقع عشوائية
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // مدة ومدة تأخير عشوائية للوميض
+                const duration = `${Math.random() * 3 + 2}s`;
+                const delay = `${Math.random() * 5}s`;
+                
+                star.style.setProperty('--duration', duration);
+                star.style.animationDelay = delay;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // محاكاة شريط التقدم
+        function simulateProgress() {
+            const progressBar = document.getElementById('progress');
+            const loadingText = document.getElementById('loading');
+            let progress = 0;
+            
+            const interval = setInterval(() => {
+                progress += Math.random() * 8 + 2;
+                if (progress > 100) progress = 100;
+                
+                progressBar.style.width = `${progress}%`;
+                
+                if (progress >= 30) {
+                    loadingText.textContent = "جاري تجهيز الملفات...";
+                }
+                
+                if (progress >= 70) {
+                    loadingText.textContent = "جاري التجميع النهائي...";
+                }
+                
+                if (progress === 100) {
+                    clearInterval(interval);
+                    loadingText.textContent = "اكتمل التحميل بنجاح!";
+                    loadingText.style.color = "#4CAF50";
+                    
+                    // الانتقال بعد 3 ثواني
+                    setTimeout(() => {
+                        window.location.href = "https://midoandbody.blogspot.com/?m=1";
+                    }, 3000);
+                }
+            }, 300);
+        }
+        
+        // بدء كل شيء عند تحميل الصفحة
+        window.onload = function() {
+            createStars();
+            setTimeout(simulateProgress, 1000);
+        };
+    </script>
+</body>
+</html>
