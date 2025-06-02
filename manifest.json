@@ -1,0 +1,27 @@
+{
+  "name": "خدمة وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ",
+  "short_name": "خدمة وإنك لتهدي إلى صراط مستقيم"
+  "description": "هذه خدمة إإسلامية يستفيد منها المسلم في حياته اليومية كثيراً وتسمى هذه الخدمة وَإِنَّكَ لَتَهْدِي إِلَى صِرَاطٍ مُسْتَقِيمٍ",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/image realize Mido and Body (2).jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/image realize Mido and Body (3).jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ar",
+  "dir": "rtl"
+}
