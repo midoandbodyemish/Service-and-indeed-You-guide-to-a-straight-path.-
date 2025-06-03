@@ -10,15 +10,15 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/icons/image realize Mido and Body (2).jpeg",
+      "src": "/icons/img1.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/image realize Mido and Body (3).jpeg",
+      "src": "/icons/img2.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
